@@ -11,6 +11,33 @@ import javax.persistence.Id;
 @Entity
 public class Feedback {
 
+	public Feedback() {
+	}
+
+	public Feedback(Long id, Long idVeiculo, String nome, String sobrenome, String email, String identidade,
+			String estado, String cidade, String modeloVeiculo, Long nrVeiculo, Integer quilometragem,
+			Integer anoVeiculo, String observacao, Integer tempoTrabalhado, LocalDate tempoPosse, String origem,
+			String destino, Blob anexo) {
+		this.id = id;
+		this.idVeiculo = idVeiculo;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.email = email;
+		this.identidade = identidade;
+		this.estado = estado;
+		this.cidade = cidade;
+		this.modeloVeiculo = modeloVeiculo;
+		this.nrVeiculo = nrVeiculo;
+		this.quilometragem = quilometragem;
+		this.anoVeiculo = anoVeiculo;
+		this.observacao = observacao;
+		this.tempoTrabalhado = tempoTrabalhado;
+		this.tempoPosse = tempoPosse;
+		this.origem = origem;
+		this.destino = destino;
+		this.anexo = anexo;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
