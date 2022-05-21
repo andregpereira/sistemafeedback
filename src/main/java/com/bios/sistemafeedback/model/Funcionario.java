@@ -8,6 +8,20 @@ import javax.persistence.Id;
 @Entity
 public class Funcionario {
 
+	public Funcionario() {
+	}
+
+	public Funcionario(Long id, Long idFeedback, String nome, String sobrenome, String email, String identidade,
+			String senha) {
+		this.id = id;
+		this.idFeedback = idFeedback;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.email = email;
+		this.identidade = identidade;
+		this.senha = senha;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
