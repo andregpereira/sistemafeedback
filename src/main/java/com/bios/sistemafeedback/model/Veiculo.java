@@ -8,6 +8,17 @@ import javax.persistence.Id;
 @Entity
 public class Veiculo {
 
+	public Veiculo() {
+	}
+
+	public Veiculo(Long id, String placa, Long serie, String modelo, String nomePopular) {
+		this.id = id;
+		this.placa = placa;
+		this.serie = serie;
+		this.modelo = modelo;
+		this.nomePopular = nomePopular;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
