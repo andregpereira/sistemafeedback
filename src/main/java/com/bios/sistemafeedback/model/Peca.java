@@ -8,6 +8,15 @@ import javax.persistence.Id;
 @Entity
 public class Peca {
 
+	public Peca() {
+	}
+
+	public Peca(Long id, String nome, Long serie) {
+		this.id = id;
+		this.nome = nome;
+		this.serie = serie;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
