@@ -14,12 +14,11 @@ public class Feedback {
 	public Feedback() {
 	}
 
-	public Feedback(Long id, Long idVeiculo, String nome, String sobrenome, String email, String identidade,
-			String estado, String cidade, String modeloVeiculo, Long nrVeiculo, Integer quilometragem,
-			Integer anoVeiculo, String observacao, Integer tempoTrabalhado, LocalDate tempoPosse, String origem,
-			String destino, Blob anexo) {
+	public Feedback(Long id, String nome, String sobrenome, String email, String identidade, String estado,
+			String cidade, String modeloVeiculo, Long nrVeiculo, Integer quilometragem, Integer anoVeiculo,
+			String observacao, Integer tempoTrabalhado, LocalDate tempoPosse, String origem, String destino,
+			Blob anexo) {
 		this.id = id;
-		this.idVeiculo = idVeiculo;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.email = email;
@@ -42,7 +41,6 @@ public class Feedback {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
 
-	private Long idVeiculo;
 	private String nome;
 	private String sobrenome;
 	private String email;
@@ -66,14 +64,6 @@ public class Feedback {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public Long getIdVeiculo() {
-		return idVeiculo;
-	}
-
-	public void setIdVeiculo(Long idVeiculo) {
-		this.idVeiculo = idVeiculo;
 	}
 
 	public String getNome() {
