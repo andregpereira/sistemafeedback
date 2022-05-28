@@ -1,0 +1,86 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<title>Feedback revisão</title>
+</head>
+<body>
+	<img class="mx-auto d-block mt-4 mb-4" alt="Logo Scania"
+		src="/img/scania_logo.png" width="80">
+	<h2 class="text-center my-4">Revise e confirme as informações</h2>
+	<form class="container my-4" action="#"
+		th:action="@{/feedback/feedbackEnviado}" method="post">
+		<div class="row justify-content-end">
+			<div class="col mx-4">
+				<div class="row my-3">
+					<label class="text-center form-label">Informações pessoais</label>
+					<span>Nome: *nome*</span>
+				</div>
+				<div class="row my-3">
+					<span>Sobrenome: *sobrenome*</span>
+				</div>
+				<div class="row my-3">
+					<span>E-mail: *e-mail*</span>
+				</div>
+				<div class="row my-3">
+					<span>Identidade: *identidade*</span>
+				</div>
+				<div class="row my-3">
+					<span>Estado: *estado*</span>
+				</div>
+				<div class="row my-3">
+					<span>Cidade: *cidade*</span>
+				</div>
+				<hr>
+				<div class="row mt-4">
+					<label class="text-center form-label">Informações do
+						veículo</label> <span>Modelo do veículo: *modelo do veículo*</span>
+				</div>
+				<div class="row my-3">
+					<span>Número de série do veículo: *número de série do
+						veículo*</span>
+				</div>
+				<div class="row my-3">
+					<span>Quilometragem: *quilometragem*</span>
+				</div>
+				<div class="row my-3">
+					<span>Ano do veículo: *ano do veículo*</span>
+				</div>
+				<div class="row my-3">
+					<span>Observações sobre o veículo: *observações sobre o
+						veículo*</span>
+				</div>
+			</div>
+			<div class="col mx-4">
+				<div class="row my-3">
+					<label class="text-center form-label">Informações
+						adicionais</label> <span>Tempo trabalhado na área (em anos): *tempo
+						trabalhado na área (em anos)*</span>
+				</div>
+				<div class="row my-3">
+					<span>Tempo de posse do veículo: *dd/mm/aaaa*</span>
+				</div>
+				<hr>
+				<div class="row mt-4">
+					<label class="text-center form-label">Trajeto mais
+						percorrido</label> <span>Origem: *origem*</span>
+				</div>
+				<div class="row my-3">
+					<span>Destino: *destino*</span>
+				</div>
+				<hr>
+				<div class="row mt-4 mb-5">
+					<label class="text-center form-label">Anexo (opcional)</label> <span>*anexo*</span>
+				</div>
+				<button class="btn btn-outline-primary mt-5" type="submit">Confirmar
+					e enviar feedback</button>
+				<a class="btn btn-outline-primary mt-5" href="/feedback">Voltar</a>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
